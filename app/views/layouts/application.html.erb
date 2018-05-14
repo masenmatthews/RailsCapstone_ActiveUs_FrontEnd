@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CapstoneFrontend</title>
+    <title>Active.Us</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

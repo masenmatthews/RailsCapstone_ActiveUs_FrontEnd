@@ -1,0 +1,18 @@
+<nav class="nav-extended blue-grey">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Organizations", organizations_path %></li>
+        <% if current_user %>
+         <li><%= link_to "Sign out", '/signout' %></li>
+         <li><%=link_to "Hi, #{current_user.username}" %></li>
+       <% else %>
+         <li><%= link_to "Sign up", 'signup' %></li>
+         <li><%= link_to "Sign in", '/signin' %></li>
+       <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
