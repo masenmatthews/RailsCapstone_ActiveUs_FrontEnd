@@ -1,11 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "materialize";
+
 body {
   background-image: image-url('background.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: #fff;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+a:link, a:visited, a:hover {
+  color: white;
 }
 
 p, ol, ul, td {
@@ -18,19 +30,6 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
 }
 
 th {
