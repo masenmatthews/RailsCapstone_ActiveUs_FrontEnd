@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :organizations
-
+  resources :users
+  
   root :to => 'layouts#index'
 
   get '/signup' => 'users#new'

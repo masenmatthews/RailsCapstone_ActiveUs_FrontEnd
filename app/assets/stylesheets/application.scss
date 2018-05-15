@@ -2,6 +2,14 @@
 @import "bootstrap";
 @import "materialize";
 
+.card-content {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 body {
   background-image: image-url('background.jpeg');
   -webkit-background-size: cover;
@@ -21,9 +29,8 @@ a:link, a:visited, a:hover {
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: arial, arial, helvetica, sans-serif;
+  font-size: 20px;
 }
 
 pre {
@@ -74,7 +81,7 @@ div {
   }
 
   ul li {
-    font-size: 12px;
+    font-size: 14px;
     list-style: square;
   }
 }

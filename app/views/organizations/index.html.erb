@@ -1,25 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="card-content blue lighten-2 white-text z-depth-3">
+  <h3>Organizations</h3>
+  <p>Let's get started! Select a cause that you're passionate about to see a list of organization shtat correspond with it. </p>
 
-<h1>Organizations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @organizations.each do |organization| %>
-      <tr>
-        <td><%= link_to 'Show', organization %></td>
-        <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
-        <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Organization', new_organization_path %>
+</div>
