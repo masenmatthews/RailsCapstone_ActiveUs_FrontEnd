@@ -1,7 +1,9 @@
 class OrganizationsController < ApplicationController
 
   def index
-    @organizations = Organization.get_organizations
+    @homeless_organizations = Organization.get_homeless_organizations
+    @music_and_art_organizations = Organization.get_music_and_art_organizations
+    @animal_welfare_organizations = Organization.get_animal_welfare_organizations
    end
 
   def new

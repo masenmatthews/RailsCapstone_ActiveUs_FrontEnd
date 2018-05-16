@@ -1,15 +1,17 @@
 <div class="card-content blue lighten-2 white-text z-depth-3">
   <h3>Organizations</h3>
   <p>Let's get started! Select a cause that you're passionate about to see a list of organization shtat correspond with it. </p>
-
-  <p><%= @organizations %></p>
-
+  <p><%= @homeless_organizations %></p>
 
   <div class="row">
     <a class="waves-effect waves-light orange darken-1 btn-large" href="#modalHome">Homelessness</a>
     <a class="waves-effect waves-light orange darken-1 btn-large" href="#modalAnim">Animal welfare</a>
     <a class="waves-effect waves-light orange darken-1 btn-large" href="#modalMusi">Music and Art</a>
   </div>
+
+  <p><%= @music_and_art_organizations %></p>
+
+
   <div class="row">
     <a class="btn-large disabled">Environmental</a>
     <a class="btn-large disabled">Refguee resettlement</a>
@@ -20,4 +22,8 @@
     <a class="btn-large disabled">Political</a>
     <a class="btn-large disabled">Miscellaneous</a>
   </div>
+
+  <p><%= @animal_welfare_organizations %></p>
+
+
 </div>
