@@ -1,9 +1,8 @@
 class OrganizationsController < ApplicationController
-  before_action :authorize, only: [:new]
 
   def index
-    @organizations = Organization.all
-  end
+    @organizations = Organization.get_organizations
+   end
 
   def new
     @organization = Organization.new

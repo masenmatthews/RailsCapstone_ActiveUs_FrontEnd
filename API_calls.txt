@@ -1,0 +1,3 @@
+http://localhost:3001/organizations?category=Homelessness
+http://localhost:3001/organizations?category=Animal+welfare
+http://localhost:3001/organizations?category=Music+and+Art
