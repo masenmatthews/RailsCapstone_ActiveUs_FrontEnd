@@ -1,7 +1,17 @@
 <div class="card-content blue lighten-2 white-text z-depth-3">
   <h3>Organizations</h3>
   <p>Let's get started! Select a cause that you're passionate about to see a list of organization shtat correspond with it. </p>
-  <p><%= @homeless_organizations %></p>
+
+  <ul>
+    <% @homeless_organizations.each do |organization| %>
+      <li>
+          <h3><%= organization.name %></h3>
+          <h3><%= organization.description %></h3>
+          <h3><%= organization.address %></h3>
+          <h3><%= organization.phone %></h3>
+          <h3><%= organization.website %></h3>
+      </li>
+    <% end %>
 
   <div class="row">
     <a class="waves-effect waves-light orange darken-1 btn-large" href="#modalHome">Homelessness</a>

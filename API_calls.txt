@@ -1,3 +1,15 @@
 http://localhost:3001/organizations?category=Homelessness
 http://localhost:3001/organizations?category=Animal+welfare
 http://localhost:3001/organizations?category=Music+and+Art
+
+
+    <ul>
+      <% @homeless_organizations.each do |organization| %>
+        <li>
+            <h3><%= organization.name %></h3>
+            <h3><%= organization.description %></h3>
+            <h3><%= organization.address %></h3>
+            <h3><%= organization.phone %></h3>
+            <h3><%= organization.website %></h3>
+        </li>
+      <% end %>
