@@ -1,12 +1,8 @@
 class Organization
   def self.get_homeless_organizations
-    response = RestClient.get('http://localhost:3001/organizations?category=Homelessness')
-      JSON.parse(response)
-      if response.code == '200' then
-      response.each do |response|
-        puts response
-        puts "#{response['name']['description']['address']['phone']['website']}"
-      end
+    response = JSON.parse(RestClient.get('http://localhost:3001/organizations?category=Homelessness'))
+    response.each do |organization|
+      p organization.values_at('name', 'description', 'address', 'phone', 'website')
     end
   end
   def self.get_music_and_art_organizations
