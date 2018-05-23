@@ -1,6 +1,11 @@
 class OrganizationsController < ApplicationController
 
   def index
+    @name = params[:name]
+    @description = params[:description]
+    @address = params[:address]
+    @phone = params[:phone]
+    @website = params[:website]
     @homeless_organizations = Organization.get_homeless_organizations
     @music_and_art_organizations = Organization.get_music_and_art_organizations
     @animal_welfare_organizations = Organization.get_animal_welfare_organizations
