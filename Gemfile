@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'jb'
 gem 'activestorage'
 ruby '2.4.1'
 gem 'devise', '~> 4.4.3'

@@ -1,11 +1,6 @@
 class OrganizationsController < ApplicationController
 
   def index
-    @name = params[:name]
-    @description = params[:description]
-    @address = params[:address]
-    @phone = params[:phone]
-    @website = params[:website]
     @homeless_organizations = Organization.get_homeless_organizations
     @music_and_art_organizations = Organization.get_music_and_art_organizations
     @animal_welfare_organizations = Organization.get_animal_welfare_organizations
@@ -27,7 +22,12 @@ class OrganizationsController < ApplicationController
   end
 
   def show
+    @homeless_organizations = Organization.get_homeless_organizations
     @organization = Organization.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json render :partial => "organizations/show.json"
+    end
   end
 
   def edit
